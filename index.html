@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Converter</title>
-</head>
-<body>
-    <div class="wrapper">
-        <h1>Welcome to Currencly</h1>
-        <P> Currencly is a currency converter application that </P>
-        <div class="box">
-            <div class="left-box">
-                <select name="currency" class="currency"></select>
-                <input type="amount" name="" id="input">
-
-            </div>
-            <div class="right-box">
-                <select name="currency" class="currency"></select>
-                <input type="amount" name="" id="results">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <main>
+      <form
+        id="user-form"
+        class="card-body flex-row"
+        style="border: black 2px solid"
+      >
+        <div class="col-12 col-md-6">
+          <input type="text" name="amount" placeholder="Amount" />
         </div>
 
-    </div>
-</body>
+        <div class="col-12 col-md-3">
+          <select>
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="jpy">JPY</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <select>
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="jpy">JPY</option>
+          </select>
+        </div>
+      </form>
+    </main>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>
