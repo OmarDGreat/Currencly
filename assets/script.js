@@ -1,26 +1,62 @@
-// var getCurrency = function () {
-//     // format the github api url
-//     var from = $("#from").val();
-//     var to = $("#to").val();
-//     var amount = $("#amount").val();
-//     var apiUrl = `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`;
+var from = $("#from").val();
+var to = $("#to").val();
+var amount = $("#amount").val();
 
-//     // make a request to the url
-//     fetch(apiUrl).then(function (response) {
-//       response.json().then(function (data) {
-//         console.log(data);
-//       });
-//     });
-//   };
+var getCurrency = function () {
+    // format the github api url
+    var apiUrl = `https://api.exchangerate.host/convert?from=usd&to=eur&amount=10`;
+    // `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`
+    // make a request to the url
+    fetch(apiUrl).then(function (response) {
+      response.json().then(function (data) {
+        console.log(data.result);
+      });
+    });
+  };
 
-$(document).ready(function(){
+  getCurrency();
 
-  $("amount").focus( function(){
-  console.log("I am focus");
+  var displayAmount = function (amount, symbols, base) {
+    console.log(amount);
+    console.log(symbols);
+    console.log(base);
   
-  });
+  };
 
-});
+  displayAmount();
+
+  //click event
+  $("#convert").on("click", function () {
+    // format the github api url
+    var apiUrl = `https://api.exchangerate.host/convert?from=usd&to=eur&amount=10`;
+    // `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`
+    // make a request to the url
+    fetch(apiUrl).then(function (response) {
+      response.json().then(function (data) {
+        console.log(data.result);
+      });
+    });
+
+    
+
+    //local storage
+    localStorage.setItem("from", from);
+    localStorage.setItem("to", to);
+    localStorage.setItem("amount", amount);
+  }
+  );
+
+    localStorage.getItem("from");
+    localStorage.getItem("to");
+    localStorage.getItem("amount");
+
+    //call the function to display the amount
+    displayAmount();
+
+
+
+  
+// });
 
   // // listen for the submit event
   // $("#convert").on("submit", function (event) {
