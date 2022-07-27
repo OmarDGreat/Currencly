@@ -2,38 +2,40 @@ var from = $("#from").val();
 var to = $("#to").val();
 var amount = $("#amount").val();
 
-var getCurrency = function () {
-    // format the github api url
-    var apiUrl = `https://api.exchangerate.host/convert?from=usd&to=eur&amount=10`;
-    // `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`
-    // make a request to the url
-    fetch(apiUrl).then(function (response) {
-      response.json().then(function (data) {
-        console.log(data.result);
-      });
-    });
-  };
+// var getCurrency = function () {
+//     // format the github api url
+//     var apiUrl = `https://api.exchangerate.host/convert?from=usd&to=eur&amount=10`;
+//     // `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`
+//     // make a request to the url
+//     fetch(apiUrl).then(function (response) {
+//       response.json().then(function (data) {
+//         console.log(data.result);
+//       });
+//     });
+//   };
 
-  getCurrency();
+  // getCurrency();
 
   var displayAmount = function (amount, symbols, base) {
     console.log(amount);
-    console.log(symbols);
-    console.log(base);
+    // console.log(symbols);
+    // console.log(base);
   
   };
 
-  displayAmount();
+  // displayAmount();
 
   //click event
-  $("#convert").on("click", function () {
+  $("#convert").on("click", function (event) {
     // format the github api url
+    event.preventDefault();
     var apiUrl = `https://api.exchangerate.host/convert?from=usd&to=eur&amount=10`;
     // `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`
     // make a request to the url
     fetch(apiUrl).then(function (response) {
       response.json().then(function (data) {
-        console.log(data.result);
+        // console.log(data.result);
+        displayAmount(data.result);
       });
     });
 
@@ -49,11 +51,6 @@ var getCurrency = function () {
     localStorage.getItem("from");
     localStorage.getItem("to");
     localStorage.getItem("amount");
-
-    //call the function to display the amount
-    displayAmount();
-
-
 
   
 // });
