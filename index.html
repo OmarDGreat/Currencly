@@ -4,34 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Currencly</title>
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
     <div class="wrapper">
       <h1>Welcome to Currencly!</h1>
       <P> Currencly is a multifaceted currency converter application that allows travelers to plan efficiently and financially for their upcoming trip.</P>
-      <h3> Check the live currency  exchange rates</h3>
+      <h3> Check the live currency exchange rates</h3>
 
     <main>
-      <form
-        id="user-form"
-        class="card-body flex-row"
-        style="border: black 2px solid"
-      >
-        <div class="col-12 col-md-3">
-          <input type="text" name="amount" placeholder="Amount" />
+  
+      <form action="" class="convert" id="user-form">
+        <div class="convert-box">
+            <div class="box">
+               <p>Amount</p> 
+          <input type="text" name="amount" placeholder="Amount"/>
+
+          
         </div>
 
-        <div class="col-12 col-md-3">
+        <div class="box">
+          <p>From</p>
           <select>
             <option value="usd">USD</option>
             <option value="eur">EUR</option>
             <option value="jpy">JPY</option>
+            
+      
+            
           </select>
         </div>
 
-        <div class="col-12 col-md-3">
+
+        <p> &#8594;</p>
+
+        <div class="box">
+          <p>To</p> 
           <select>
             <option value="usd">USD</option>
             <option value="eur">EUR</option>
@@ -41,9 +50,17 @@
           </select>
           
         </div>
-        <button class="btn1" type="submit">convert</button>
-      </form>
+        <div class="btn1"></div>
+      
+        <input type="submit" value="Convert" id="btn1">
+        <div class="display-result"></div>
+
+
+      </form> 
     </main>
+    <details>
+      <summary>Country Information</summary>
+    </details>
     <script src="./assets/script.js"></script>
   </body>
 </html>
