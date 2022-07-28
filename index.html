@@ -9,18 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <div class="wrapper">
-      <h1>Welcome to Currencly!</h1>
-      <P> Currencly is a multifaceted currency converter application that allows travelers to plan efficiently and financially for their upcoming trip.</P>
-      <h3> Check the live currency exchange rates</h3>
+    <div class="container">
+      <div class="block">
+      <h1 class="title is-1">Welcome to Currencly!</h1>
+      <p class="content is-medium"> Currencly is a multifaceted currency converter application that allows travelers to plan efficiently and financially for their upcoming trip.</p>
+      <h3 class="title is-3"> Check the live currency exchange rates</h3>
+      </div>
 
     <main>
-  
+  <div class="block">
       <form action="" class="convert" id="user-form">
         <div class="convert-box">
             <div class="box">
                <p>Amount</p> 
-          <input type="text" name="amount" placeholder="Amount"/>
+          <input type="text" name="amount" placeholder="Enter amount"/>
 
           
         </div>
@@ -53,8 +55,9 @@
         </div>
         <div class="btn1"></div>
       
-        <input type="submit" value="Convert" id="btn1">
+        <buttonv class="button">Convert</buttonv>
         <div class="display-result"></div>
+  </div>
 
 
       </form> 
