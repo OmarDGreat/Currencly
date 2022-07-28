@@ -4,35 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Currencly</title>
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <div class="wrapper">
-      <h1>Welcome to Currencly!</h1>
-      <P> Currencly is a multifaceted currency converter application that allows travelers to plan efficiently and financially for their upcoming trip.</P>
-      <h3> Check the live currency  exchange rates</h3>
+    <div class="container">
+      <div class="block">
+      <h1 class="title is-1">Welcome to Currencly!</h1>
+      <h3 class="title is-3"> Currencly is a multifaceted currency converter application that allows travelers to plan efficiently and financially for their upcoming trip.</h3>
+      <figure class="image is-128x128">
+        <img src="W31X.gif" class="is-rounded"alt="earth spitting money">
+      </figure>
+      <h4 class="title is-4"> Check the live currency exchange rates</h4>
+      </div>
 
     <main>
-      <form
-        id="user-form"
-        class="card-body flex-row"
-        style="border: black 2px solid"
-      >
-        <div class="col-12 col-md-3">
-          <input type="text" name="amount" placeholder="Amount" />
+  <div class="block">
+      <form action="" class="convert" id="user-form">
+        <div class="convert-box">
+            <div class="box">
+               <p>Amount</p> 
+          <input type="text" name="amount" placeholder="Enter amount"/>
+
+          
         </div>
 
-        <div class="col-12 col-md-3">
+        <div class="box">
+          <p>From</p>
           <select>
             <option value="usd">USD</option>
             <option value="eur">EUR</option>
             <option value="jpy">JPY</option>
+            
+      
+            
           </select>
         </div>
 
-        
-        <div class="col-12 col-md-3">
+
+        <p> &#8594;</p>
+
+        <div class="box">
+          <p>To</p> 
           <select>
             <option value="usd">USD</option>
             <option value="eur">EUR</option>
@@ -42,20 +56,26 @@
           </select>
           
         </div>
-        <button class="btn1" type="submit">convert</button>
-      </form>
-
-      <details id="user-form"
-      class="card-body flex-row"
-      style="border: black 2px solid">
+        <div class="btn1"></div>
       
-        <summary>I have keys but no doors. I have space but no room. You can enter but can’t leave. What am I?</summary>
-        A keyboard.
-      </details>
-    
+        <buttonv class="button">Convert</buttonv>
+        <div class="display-result"></div>
+  </div>
 
+<<<<<<< HEAD
     </main>
     
+=======
+
+      </form> 
+    </main>
+    <!-- <figure class="image is-128x128">
+    <img src="earthimage.jpeg" class="is-rounded"alt="earth spitting money">
+  </figure> -->
+    <details>
+      <summary>Country Information</summary>
+    </details>
+>>>>>>> eb2c217ddfd57e6e1a5078685d4677b0527bab51
     <script src="./assets/script.js"></script>
   </body>
 </html>
