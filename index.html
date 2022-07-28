@@ -13,32 +13,48 @@
 
       <form
         id="user-form"
-        class="card-body flex-row flex-wrap"
+        class="card-body flex-row justify-space-between"
         style="border: black 2px solid"
       >
-        <label class="col-12 col-md-3">
-          <!-- parsefloat -->
-          <input type="text" placeholder="Amount" id="amount" class="textInput" name="amount" autofocus="true"/>
-        </label>
 
-        <div class="col-12 col-md-3">
-          <select id="from">
-            <i class=""><option value="usd">USD</option></i>
-            <option value="eur">EUR</option>
-            <option value="jpy">JPY</option>
+        <div>
+          <select id="currency1">
+            <option value="USD">USD</option></i>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="BTC">BTC</option>
           </select>
+          <input type="number" id="amount1" placeholder="0" value="1">
         </div>
 
-        <div class="col-12 col-md-3">
-          <select id="to">
-            <option value="usd">USD</option>
-            <option value="eur">EUR</option>
-            <option value="jpy">JPY</option>
-          </select>
+        <div>
+          <!-- <button class="btn" id="swap">Swap</button> -->
+          <div class="rate" id="rate" ></div>
         </div>
 
-        <button id="convert" class="col-12 col-md-3">Convert</button>
+        <div>
+          <select id="currency2">
+            <option value="USD">USD</option></i>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="BTC">BTC</option>
+          </select>
+          <input type="number" id="amount2" placeholder="0" value="1">
+        </div>
+
     </form>
+
+    <div>
+      <article 
+      id="user-form"
+      class="card-body flex-row justify-space-between"
+      style="border: black 2px solid">
+        <h1>
+          <span id="country"></span>
+        </h1>
+        <p id="country-summary"></p>
+      </article>
+    </div>
 
     </main>
 

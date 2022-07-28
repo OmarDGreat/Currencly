@@ -1,93 +1,81 @@
-var from = $("#from").val();
-var to = $("#to").val();
-var amount = $("#amount").val();
+const currencyEl_one = $('#currency1');
+const currencyEl_two = $('#currency2');
+const amountEL_one = $('#amount1');
+const amountEL_two = $('#amount2');
 
-// var getCurrency = function () {
-//     // format the github api url
-//     var apiUrl = `https://api.exchangerate.host/convert?from=usd&to=eur&amount=10`;
-//     // `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`
-//     // make a request to the url
-//     fetch(apiUrl).then(function (response) {
-//       response.json().then(function (data) {
-//         console.log(data.result);
-//       });
-//     });
-//   };
+const rateEl = $('#rate');
+const swap = $('#swap');
+const countryEl = $('#country');
 
-  // getCurrency();
 
-  var displayAmount = function (amount, symbols, base) {
-    console.log(amount);
-    // console.log(symbols);
-    // console.log(base);
+// fetch currency rates and update the DOM
+function calculate() {
+
+  const currency_one = currencyEl_one.val();
+  const currency_two = currencyEl_two.val();
+
+  fetch(`https://api.exchangerate.host/latest?base=${currency_one}`)
   
-  };
+    .then(res => res.json())
+    .then(data => {
+      // console.log(data);
+      const rate = data.rates[currency_two];
+      const amount = amountEL_one.val() * rate;
+      rateEl.html(`${amount1.value} ${currency_one} = ${amount} ${currency_two}`);
 
-  // displayAmount();
-
-  //click event
-  $("#convert").on("click", function (event) {
-    // format the github api url
-    event.preventDefault();
-    var apiUrl = `https://api.exchangerate.host/convert?from=usd&to=eur&amount=10`;
-    // `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`
-    // make a request to the url
-    fetch(apiUrl).then(function (response) {
-      response.json().then(function (data) {
-        // console.log(data.result);
-        displayAmount(data.result);
-      });
+      amountEL_two.val(amount.toFixed(2));
     });
+}
 
-    
-
-    //local storage
-    localStorage.setItem("from", from);
-    localStorage.setItem("to", to);
-    localStorage.setItem("amount", amount);
-  }
-  );
-
-    localStorage.getItem("from");
-    localStorage.getItem("to");
-    localStorage.getItem("amount");
+  currencyEl_one.on('change', calculate);
+  currencyEl_two.on('change', calculate);
+  amountEL_one.on('input', calculate);
+  amountEL_two.on('input', calculate);
 
   
-// });
+  // fetch country summary from wikipedia and update the DOM
+  function getCountrySummary(country) {
+    fetch(`https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&prop=extracts&exintro=&explaintext=&titles=Europe`)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        const summary = data.query.pages.extract;
+        console.log(summary);
+        // $('#country-summary').html(summary);
+      });
+  }
 
-  // // listen for the submit event
-  // $("#convert").on("submit", function (event) {
-  //   event.preventDefault();
-  //   getCurrency();
 
-  // });
+  
 
-  // // listen for the change event
-  // $("#amount").on("change", function (event) {
-  //   event.preventDefault();
-  //   $('amount').focus();
-  //   $()
-  //   getCurrency();
-  // });
 
-  // // listen for the change event
-  // $("#from").on("change", function (event) {
-  //   event.preventDefault();
-  //   getCurrency();
-  // });
+calculate();
+getCountrySummary();
 
-  // // listen for the change event
-  // $("#to").on("change", function (event) {
-  //   event.preventDefault();
-  //   getCurrency();
+
+
+
+
+
+
+ // save to local storage button
+  // $('#save').on('click', () => {
+  //   const currency_one = currencyEl_one.val();
+  //   const currency_two = currencyEl_two.val();
+  //   const amount_one = amountEL_one.val();
+  //   const amount_two = amountEL_two.val();
+
+  //   localStorage.setItem('currency_one', currency_one);
+  //   localStorage.setItem('currency_two', currency_two);
+  //   localStorage.setItem('amount_one', amount_one);
+  //   localStorage.setItem('amount_two', amount_two);
+
+  //   console.log(localStorage);
   // }
-  // );
 
 
-/*
-1) Add event listener(click) for Convert button
-2) Create 3 variables to store user input values amount, from, and to textboxes
-3) make an API call and pass from, to and amount parameter values
-4) Response from API call will give you a result amount. Add that as a value to an empty textbox which shows converted amount
-
-*/
+  // //swap currencies
+  // swap.on('click', () => {
+  //   const temp = currencyEl_one.val();
+  //   currencyEl_one.val(currencyEl_two.val());
+  //   currencyEl_two.val(temp);
