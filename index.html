@@ -1,27 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Converter</title>
-</head>
-<body>
-    <div class="wrapper">
-        <h1>Welcome to Currencly</h1>
-        <P> Currencly is a currency converter application that </P>
-        <div class="box">
-            <div class="left-box">
-                <select name="currency" class="currency"></select>
-                <input type="amount" name="" id="input">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currencly</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
 
-            </div>
-            <div class="right-box">
-                <select name="currency" class="currency"></select>
-                <input type="amount" name="" id="results">
+  <body>
+
+    <figure class="image is-128x128">
+      <img src="earthimage.jpeg" class="is-rounded"alt="earth spitting money">
+    </figure>
+
+    <div class="container">
+      <div class="block">
+        
+      <h1 class="title is-1">Welcome to Currencly!</h1>
+      <h3 class="title is-3"> Currencly is a multifaceted currency converter application that allows travelers to plan efficiently and financially for their upcoming trip.</h3>
+      <h4 class="title is-4"> Check the live currency exchange rates</h4>
+
+      <figure class="image is-128x128">
+        <img src="W31X.gif" class="is-rounded"alt="earth rotating">
+      </figure>
+    
+    </div>
+
+    <main class="block">
+      
+      <form action="" class="convert" id="user-form">
+        <div class="convert-box">
+
+          <div class="box">
+            <p>From</p>
+              <select id="currency1">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="BTC">BTC</option>
+              </select>
+              <input type="number" id="amount1" placeholder="0" value="1">
+          </div>
+
+          <!-- <div>
+            <button class="btn" id="swap">Swap</button> 
+          </div> -->
+
+          <p> &#8594;</p>
+
+          <div class="box">
+            <p>To</p>
+              <select id="currency2">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="BTC">BTC</option>
+              </select>
+              <output type="number" id="amount2" placeholder="0" value="1">
+          </div>
+
+          <div class="box">
+            <p>Convert Rate</p> 
+            <div class="rate" id="rate" ></div>
+          </div> 
 
         </div>
+      </form>
 
-    </div>
-</body>
+      <details>
+        <summary>Country Information</summary>
+      </details>
+
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+
+
 </html>

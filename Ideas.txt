@@ -1,0 +1,61 @@
+
+-Title: Currencly
+
+-Description: shows the currency for the region you choose. 
+and can save that to the page
+
+-repo configured Currencly
+
+-User Story
+As a person who has a vested intrest in other currency rates
+I want to keep track of the different price fluctuations
+So that I can expand my musical taste/playlist
+
+
+API 1
+Array = [
+USD,
+JPY,
+EUR
+]
+
+Amount 
+
+
+https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${Var1}/${Var2}.json
+
+
+API #2
+
+Trip Advisor? 
+- Impala Hotel Bookings API
+
+https://docs.impala.travel/docs/booking-api/6e712a6d86e43-book-a-hotel-through-the-api-in-just-5-minutes
+
+
+API # 3
+
+Wiki API 
+
+Feature
+#1 Select Our CSS frame work
+#2 bring the framework into the html 
+
+As a world traveler I want to know exchange rates so I can plan financially for 
+trips. 
+As as world traveler I want to know about country that will be 
+visiting to know about 
+
+
+Hey my name is Omar - (Brief Intro) e.g what you do - (what you want) e.g 
+I would like to be a software developer - (Call to action) e.g setup 
+appointment for next week. 
+
+
+
+
+
+
+
+
+
