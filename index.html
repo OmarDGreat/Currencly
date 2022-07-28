@@ -4,57 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Currencly</title>
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
+
   <body>
 
-    <main>
-
-      <form
-        id="user-form"
-        class="card-body flex-row justify-space-between"
-        style="border: black 2px solid"
-      >
-
-        <div>
-          <select id="currency1">
-            <option value="USD">USD</option></i>
-            <option value="EUR">EUR</option>
-            <option value="JPY">JPY</option>
-            <option value="BTC">BTC</option>
-          </select>
-          <input type="number" id="amount1" placeholder="0" value="1">
-        </div>
-
-        <div>
-          <!-- <button class="btn" id="swap">Swap</button> -->
-          <div class="rate" id="rate" ></div>
-        </div>
-
-        <div>
-          <select id="currency2">
-            <option value="USD">USD</option></i>
-            <option value="EUR">EUR</option>
-            <option value="JPY">JPY</option>
-            <option value="BTC">BTC</option>
-          </select>
-          <input type="number" id="amount2" placeholder="0" value="1">
-        </div>
-
-    </form>
-
-    <div>
-      <article 
-      id="user-form"
-      class="card-body flex-row justify-space-between"
-      style="border: black 2px solid">
-        <h1>
-          <span id="country"></span>
-        </h1>
-        <p id="country-summary"></p>
-      </article>
+    <div class="container">
+      <div class="block">
+        
+      <h1 class="title is-1">Welcome to Currencly!</h1>
+      <h3 class="title is-3"> Currencly is a multifaceted currency converter application that allows travelers to plan efficiently and financially for their upcoming trip.</h3>
+      <figure class="image is-128x128">
+        <img src="W31X.gif" class="is-rounded"alt="earth rotating">
+      </figure>
+      <h4 class="title is-4"> Check the live currency exchange rates</h4>
+    
     </div>
+
+    <main class="block">
+      
+      <form action="" class="convert" id="user-form">
+        <div class="convert-box">
+
+          <div class="box">
+            <p>From</p>
+              <select id="currency1">
+                <option value="USD">USD</option></i>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="BTC">BTC</option>
+              </select>
+              <input type="number" id="amount1" placeholder="0" value="1">
+          </div>
+
+          <!-- <div>
+            <button class="btn" id="swap">Swap</button> 
+          </div> -->
+
+          <p> &#8594;</p>
+
+          <div class="box">
+            <p>To</p>
+              <select id="currency2">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="BTC">BTC</option>
+              </select>
+              <input type="number" id="amount2" placeholder="0" value="1">
+          </div>
+
+          <div class="box">
+            <p>Convert Rate</p> 
+            <div class="rate" id="rate" ></div>
+          </div> 
+
+        </div>
+      </form>
+
+      <details>
+        <summary>Country Information</summary>
+      </details>
 
     </main>
 
@@ -62,6 +74,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./assets/script.js"></script>
+    <script src="./assets/script.js"></script>
   </body>
 
+
 </html>
+
+gi
+
+
+
+<!-- <figure class="image is-128x128">
+      <img src="earthimage.jpeg" class="is-rounded"alt="earth spitting money">
+    </figure> -->
