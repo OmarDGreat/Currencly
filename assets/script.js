@@ -44,8 +44,6 @@ function calculate() {
         // $('#country-summary').html(summary);
       });
   }
-
-
   
 
 
