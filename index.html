@@ -10,6 +10,7 @@
   </head>
 
   <body>
+
     <div class="container">
       <div class="block">
         
@@ -20,59 +21,69 @@
       </figure>
       <h4 class="title is-4"> Check the live currency exchange rates</h4>
     
-      </div>
-
-    <main>
-    <div class="block">
-      <form action="" class="convert" id="user-form">
-        <div class="convert-box">
-            <div class="box">
-               <p>Amount</p> 
-          <input class="input is-large" type="text" name="amount" placeholder="Enter amount"/>
-
-          
-        </div>
-
-        <div class="box">
-          <p>From</p>
-          <select>
-            <option value="usd">USD</option>
-            <option value="eur">EUR</option>
-            <option value="jpy">JPY</option>
-            
-          </select>
-        </div>
-
-        
-
-
-        <p> &#8594;</p>
-
-        <div class="box">
-          <p>To</p> 
-          <select>
-            <option value="usd">USD</option>
-            <option value="eur">EUR</option>
-            <option value="jpy">JPY</option>
-      
-          </select>
-        </div>
-
-        <div class="btn1"></div>
-      
-        <!-- <buttonv class="button">Convert</buttonv> -->
-        <div class="display-result"></div>
     </div>
 
+    <main class="block">
+      
+      <form action="" class="convert" id="user-form">
+        <div class="convert-box">
 
-        </form> 
-      </main>
-      <!-- <figure class="image is-128x128">
-      <img src="earthimage.jpeg" class="is-rounded"alt="earth spitting money">
-    </figure> -->
+          <div class="box">
+            <p>From</p>
+              <select id="currency1">
+                <option value="USD">USD</option></i>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="BTC">BTC</option>
+              </select>
+              <input type="number" id="amount1" placeholder="0" value="1">
+          </div>
+
+          <!-- <div>
+            <button class="btn" id="swap">Swap</button> 
+          </div> -->
+
+          <p> &#8594;</p>
+
+          <div class="box">
+            <p>To</p>
+              <select id="currency2">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="BTC">BTC</option>
+              </select>
+              <input type="number" id="amount2" placeholder="0" value="1">
+          </div>
+
+          <div class="box">
+            <p>Convert Rate</p> 
+            <div class="rate" id="rate" ></div>
+          </div> 
+
+        </div>
+      </form>
+
       <details>
         <summary>Country Information</summary>
       </details>
-      <script src="./assets/script.js"></script>
+
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./assets/script.js"></script>
+    <script src="./assets/script.js"></script>
   </body>
-  </html>
+
+
+</html>
+
+
+
+
+
+<!-- <figure class="image is-128x128">
+      <img src="earthimage.jpeg" class="is-rounded"alt="earth spitting money">
+    </figure> -->
