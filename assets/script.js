@@ -5,7 +5,7 @@ const amountEL_two = $('#amount2');
 
 const rateEl = $('#rate');
 const swap = $('#swap');
-const countryEl = $('#country');
+// const countryEl = $('#country');
 
 
 // fetch currency rates and update the DOM
@@ -32,27 +32,22 @@ function calculate() {
   amountEL_one.on('input', calculate);
   amountEL_two.on('input', calculate);
 
+  calculate();
+
   
   // fetch country summary from wikipedia and update the DOM
-  function getCountrySummary(country) {
-    fetch(`https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&prop=extracts&exintro=&explaintext=&titles=Europe`)
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        const summary = data.query.pages.extract;
-        console.log(summary);
-        // $('#country-summary').html(summary);
-      });
-  }
+  // function getCountrySummary(country) {
+  //   fetch(`https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&prop=extracts&exintro=&explaintext=&titles=Europe`)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       console.log(data);
+  //       const summary = data.query.pages.extract;
+  //       console.log(summary);
+  //       // $('#country-summary').html(summary);
+  //     });
+  // }
   
-
-
-calculate();
-getCountrySummary();
-
-
-
-<input class="input is-large" type="text" name="amount" placeholder="Enter amount"/>
+// getCountrySummary();
 
 
 
